@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package main;
+
+option go_package = "/pb";
+
+service RockPaperScissorsService {
+  rpc GetUser (Empty) returns (UserResponse) {}
+}
+
+message Empty {
+}
+
+message UserResponse {
+  string name = 1;
+}
